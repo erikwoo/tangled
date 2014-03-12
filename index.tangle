@@ -1,0 +1,14 @@
+body
+	h3= new Date()
+		&
+			font-size 100px
+	&
+		color steelblue
+		text-shadow 1px 1px 1px #777
+
+	:iced
+		console.log new Date
+		await setTimeout defer(), 1000
+		console.log new Date
+		$ = require('jquery')
+		$('body').css background:'#eee'

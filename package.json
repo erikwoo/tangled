@@ -1,0 +1,28 @@
+{
+  "name": "tangled",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "~3.4.8",
+    "iced-coffee-script": "~1.7.1-a",
+    "jquery": "~2.1.0",
+    "tangle": "https://github.com/nassimwu/tangle.git"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nassimwu/tangled.git"
+  },
+  "keywords": [
+    "tangle"
+  ],
+  "author": "nassimwu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nassimwu/tangled/issues"
+  }
+}
