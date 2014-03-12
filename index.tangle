@@ -10,5 +10,5 @@ body
 		console.log new Date
 		await setTimeout defer(), 1000
 		console.log new Date
-		$ = require('jquery')
+		$ = require 'jquery'
 		$('body').css background:'#eee'
