@@ -7,8 +7,10 @@ body
 		text-shadow 1px 1px 1px #777
 
 	:iced
-		console.log new Date
+		console.time 'a'
 		await setTimeout defer(), 1000
-		console.log new Date
+		console.timeEnd 'a'
 		$ = require 'jquery'
-		$('body').css background:'#eee'
+		setInterval ->
+			$('h3').text new Date()
+		, 1000
