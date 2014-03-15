@@ -6,11 +6,18 @@ body
 		color steelblue
 		text-shadow 1px 1px 1px #777
 
+	:iced($)
+		module.exports = require 'jquery'
+
+	:iced(clock)
+		$ = require '$'
+		setInterval ->
+			$('h3').text new Date()
+		, 1000
+
 	:iced
 		console.time 'a'
 		await setTimeout defer(), 1000
 		console.timeEnd 'a'
-		$ = require 'jquery'
-		setInterval ->
-			$('h3').text new Date()
-		, 1000
+		require 'clock'
+		

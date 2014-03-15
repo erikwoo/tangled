@@ -18,4 +18,4 @@ module.exports = (app, express,dir)->
 		#	app.use express.errorHandler()
 
 	app.get '/', (req, res) ->
-		res.render "index", process
+		res.render "index", {}
