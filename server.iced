@@ -19,3 +19,14 @@ module.exports = (app, express,dir)->
 
 	app.get '/', (req, res) ->
 		res.render "index", {}
+fs = require 'fs'
+path = require 'path'
+tangle = require('tangle')
+await fs.readFile './index.tangle', defer err, str
+#await tangle.compile str.toString(),
+#	filename:path.resolve './index.tangle'
+#, defer err,fn
+#console.log fn()
+tangle.render str.toString(),
+	filename:path.resolve './index.tangle'
+,console.log.bind(console)

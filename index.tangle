@@ -1,23 +1,19 @@
 body
-	h3= new Date()
-		&
-			font-size 100px
-	&
-		color steelblue
-		text-shadow 1px 1px 1px #777
-
-	:iced($)
-		module.exports = require 'jquery'
-
-	:iced(clock)
-		$ = require '$'
+	<<clock
+		h3= new Date()
+			&
+				relative top left
+				font-size 100px
+				color steelblue
+				text-shadow 1px 1px 1px #777
+	::clock
+		$ = require 'jquery'
 		setInterval ->
-			$('h3').text new Date()
+			$('.clock').html templates.clock()
 		, 1000
 
-	:iced
+	::main
 		console.time 'a'
 		await setTimeout defer(), 1000
 		console.timeEnd 'a'
 		require 'clock'
-		
