@@ -26,15 +26,14 @@ html
 
 		::clock
 			$ = require 'jquery'
-			console.log templates
 			setInterval ->
 				$('.clock').html templates.clock()
 			, 1000
 
 		::
 			d3 = require 'd3'
-			d3.selectAll('p').data([8, 16, 32, 64, 128, 256]).style "font-size", (d)->
-				d + "px"
+			d3.selectAll('p').data([1..5]).style "font-size", (d)->
+				8 * Math.pow(2,d) + "px"
 
 			require 'clock'
 ```

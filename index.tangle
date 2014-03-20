@@ -20,7 +20,6 @@ html
 
 		::clock
 			$ = require 'jquery'
-			console.log templates
 			setInterval ->
 				$('.clock').html templates.clock()
 			, 1000
