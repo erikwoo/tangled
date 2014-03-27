@@ -13,3 +13,5 @@ module.exports = (app, express,dir)->
 		
 	app.get '/', (req, res) ->
 		res.render "index", {}
+
+require('tangle').renderFile './index.jade', console.log.bind console
