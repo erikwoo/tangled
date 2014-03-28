@@ -16,13 +16,13 @@ html
 				&
 					display inline-block
 					margin 1em
+					transition all .4s ease
 
 		::clock
 			setInterval refresh.clock, 1000
 
-		::
-			d3 = require 'd3'
-			d3.selectAll('p').data([1..5]).style "font-size", (d)->
-				Math.pow(2,d+2) + "px"
-
-			require 'clock'
+		::=d3+clock
+			while true
+				await setTimeout defer(), 1000
+				d3.selectAll('p').data([1..5]).style "font-size", (d)->
+					Math.pow(2,Math.random()*5+2) + "px"
